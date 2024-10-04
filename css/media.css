@@ -1,0 +1,104 @@
+@media (max-width: 1199px) {
+    .whoWeServeGridInner {
+        padding-right: 30px;
+    }
+
+    .whoWeServeGrid {
+        gap: 30px;
+    }
+
+    .whoWeServe .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .whoWeServeGrid p {
+        font-size: 14.11px;
+        line-height: 16.96px;
+    }
+}
+
+@media (max-width: 768px) {
+    .padding-class-20 {
+        padding: 15px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    .heroSection {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+    .footerMainR,
+    .footerMainLSideR,
+    .heroSectionR,
+    .heroSectionL {
+        padding: 0 !important;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .heroSectionL h1 {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .heroSectionL .button {
+        margin-top: 30px;
+    }
+
+    .navbar a img {
+        max-width: 160px;
+    }
+
+    .navbar,
+    .whoWeServe,
+    .whyLeaseMatrix {
+        padding: 20px;
+    }
+
+    .whyLeaseMatrixSlider {
+        padding: 40px 0;
+    }
+
+    .whyLeaseMatrixSlider .whyLeaseMatrixSliderR img {
+        height: 280px;
+        margin-top: 20px;
+    }
+
+    footer form {
+        margin-top: 0;
+    }
+
+    .whyLeaseMatrixSlider .whyLeaseMatrixSliderL h2 {
+        font-size: 20px;
+        line-height: 27.2px;
+    }
+
+    .howWeWorkDetails .button {
+        margin-top: 40px;
+    }
+
+    .blogsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .blogsGrid img {
+        width: 100%;
+    }
+
+    .whoWeServeGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .whoWeServeGridInner {
+        padding: 0;
+        border: none;
+    }
+}

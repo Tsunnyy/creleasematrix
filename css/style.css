@@ -1,0 +1,720 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('/gilroy-font/Gilroy-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('/gilroy-font/Gilroy-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: url('/gilroy-font/Gilroy-Heavy.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-SemiBold';
+    src: url('/gilroy-font/Gilroy-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('/gilroy-font/Gilroy-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('/gilroy-font/Gilroy-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+.padding-class-20 {
+    padding: 20px;
+}
+
+.blogs-padding-class {
+    padding: 30px 60px;
+}
+
+.navbar {
+    padding: 25px 58px;
+    box-shadow: 0px 2px 5px 0px #0000000D;
+    background: #fff;
+}
+
+.navbar .container-fluid {
+    gap: 60px;
+}
+
+.navbar-nav .nav-link.dropdown-toggle,
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #666666;
+    text-decoration: none;
+}
+
+.dropdown .nav-link.dropdown-toggle.show,
+.dropdown:hover,
+.dropdown:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.button {
+    width: 149px;
+    text-align: center;
+    padding: 12px;
+    font-family: Gilroy-SemiBold;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.7px;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: #006CFF;
+    color: #006CFF;
+    background: #fff;
+    display: inline-block;
+    text-decoration: none;
+    transition: .2s all ease-in-out;
+}
+
+
+.nav-item.dropdown.button {
+    cursor: pointer;
+}
+
+.nav-item.dropdown.button .dropdown-toggle::after {
+    display: none;
+}
+
+.nav-item.dropdown.button:hover,
+.button.bg-006CFF {
+    background: #006CFF;
+    color: #FFFFFF;
+}
+
+.nav-item.dropdown.button:hover {
+    border: 1px solid #006CFF;
+}
+
+.heroSection {
+    background: #F4F8FF;
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+.heroSectionL h1 {
+    font-family: Gilroy-SemiBold;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 50.4px;
+    color: #333333;
+    margin: 4px 0;
+}
+
+.heroSectionL .button {
+    margin-top: 64px;
+}
+
+.desc {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: justify;
+    color: #666666;
+}
+
+.span {
+    font-family: Gilroy-Regular;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #666666;
+}
+
+.title {
+    font-family: Gilroy-Light;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title.clrWhire {
+    color: #fff;
+}
+
+.title b {
+    font-family: Gilroy-SemiBold;
+}
+
+
+.ourClients {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 45px;
+}
+
+.ourClientsInner {
+    background: #F4F8FF;
+    padding: 10px 30px;
+    height: 100%;
+}
+
+.ourClients img {
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.whoWeServe {
+    background: #006CFF;
+    text-align: center;
+    padding: 40px;
+}
+
+.whoWeServeGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+}
+
+.whoWeServeGridInner {
+    padding-right: 60px;
+    border-right: 1px solid #bbbbbb;
+}
+
+.whoWeServeGridInner:last-child {
+    border: none;
+    padding: 0;
+}
+
+.whoWeServeGrid p {
+    font-family: Gilroy-Medium;
+    font-size: 18.11px;
+    font-weight: 400;
+    line-height: 21.96px;
+    text-align: center;
+    color: #fff;
+    margin: 20px 0 0;
+}
+
+.blogsGrid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 40px;
+}
+
+.blogsGrid img {
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blogsGrid .blogsDetails {
+    padding: 20px;
+}
+
+.blogsGrid .blogsDetails h5 {
+    font-family: Gilroy-SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.blogsGrid .blogsDetails a {
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.98px;
+    color: #006CFF;
+    text-decoration: none;
+}
+
+footer {
+    padding: 50px 40px;
+    background: #FAFAFA;
+    margin-top: 70px;
+}
+
+footer .desc {
+    margin: 20px 0;
+}
+
+footer h4 {
+    font-family: Gilroy-SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+footer ul li p,
+footer ul li a {
+    font-family: Gilroy-Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: justify;
+    margin-bottom: 16px;
+    color: #666666;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+}
+
+footer .footerMainLSideL .socialIcons img {
+    opacity: .3;
+    transition: .6s all ease-in-out;
+}
+
+footer .footerMainLSideL .socialIcons img:hover {
+    opacity: 1;
+}
+
+footer form {
+    box-shadow: 0px 0px 20px 0px #0000001A;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+    margin-top: -90px;
+}
+
+footer form h6 {
+    font-family: Gilroy-SemiBold;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.05px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: #333333;
+    border-bottom: 1px solid #F5F5F5;
+    padding-bottom: 10px;
+    /* margin-bottom: 30px; */
+}
+
+footer form .button {
+    width: 100%;
+    max-width: 100%;
+    /* margin-top: 30px; */
+}
+
+footer form label {
+    font-family: Gilroy-Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.56px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+footer form input {
+    background: #F9F9F9;
+    border-radius: 4px;
+    padding: 12px 14px;
+    outline: none;
+    border: none;
+    font-family: Gilroy-Regular;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    color: #666666;
+    width: 100%;
+}
+
+.copyright {
+    background: #1B2E46;
+    padding: 20px;
+}
+
+.copyright p {
+    font-family: Gilroy-Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.56px;
+    color: #fff;
+}
+
+
+.whyLeaseMatrix {
+    background: #1B2E46;
+    border-radius: 8px;
+    padding: 40px 60px;
+}
+
+/* Pagination */
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    justify-content: start;
+    left: 0;
+    width: fit-content;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: #E0ECFF;
+    opacity: 1;
+    transition: 1s all;
+}
+
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 72px;
+    position: relative;
+    border-radius: 7px;
+    transition: 1s all;
+}
+
+.howWeWorkSlider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after,
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background: #0068FF;
+    animation: pagination 5s linear;
+}
+
+@keyframes pagination {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.whyLeaseMatrixSlider .whyLeaseMatrixSliderR img {
+    height: 380px;
+    object-fit: cover;
+}
+
+.whyLeaseMatrixSlider .whyLeaseMatrixSliderL img {
+    max-width: 77px;
+}
+
+.whyLeaseMatrixSlider .whyLeaseMatrixSliderL h2 {
+    font-family: Gilroy-SemiBold;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 43.2px;
+    color: #fff;
+    margin: 27px 0 12px;
+}
+
+.whyLeaseMatrixSlider .whyLeaseMatrixSliderL p {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: justify;
+    color: #fff;
+}
+
+.howWeWorkSlider-pagination .swiper-pagination-bullet {
+    width: 48px;
+    height: 48px;
+    background: #F5F5F5;
+    border-radius: 4px;
+    display: inline-flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: Gilroy-Medium;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 19.8px;
+    color: #666666;
+}
+
+.howWeWorkSlider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #0068FF;
+    color: #fff;
+    position: relative;
+}
+
+.howWeWorkSlider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+    height: 3px;
+    inset: unset;
+    bottom: -10px;
+    left: 0;
+}
+
+.howWeWorkDetails {
+    margin-top: 50px;
+}
+
+.howWeWorkDetails h2 {
+    font-family: Gilroy-SemiBold;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.4px;
+    color: #006CFF;
+    margin: 0 0 13px;
+}
+
+.howWeWorkDetails .button {
+    margin-top: 110px;
+}
+
+.howWeWorkDetails p {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: justify;
+    color: #000000;
+}
+
+.ourProductMain {
+    padding: 60px 30px;
+    background: #F5F5F5;
+    border-radius: 8px;
+}
+
+.dropdown-menu {
+    padding: 8px;
+    box-shadow: 0px 0px 10px 0px #00000026;
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    padding: 10px;
+    border-radius: 4px;
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #333333;
+    transition: .6s all ease-in-out;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.dropdown-menu .dropdown-item img {
+    transition: .6s all ease-in-out;
+    max-width: 24px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    font-family: Gilroy-SemiBold;
+    background: #006CFF;
+    color: #fff;
+}
+
+.dropdown-menu .dropdown-item:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.ourProductMainTargetDiv {
+    height: 100vh;
+}
+
+.ourProductMain {
+    height: 100vh;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    align-items: center;
+}
+
+.ourProductMainL h4 {
+    font-family: Gilroy-SemiBold;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39.2px;
+    margin: 20px 0 10px;
+    color: #333333;
+}
+
+.ourProductMainL img {
+    width: 48px;
+}
+
+.ourProductMainL .button_group {
+    margin-top: 120px;
+}
+
+.ourProductMainL p {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.3px;
+    text-align: justify;
+    color: #555555;
+}
