@@ -134,6 +134,10 @@ table {
     border-spacing: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Gilroy-Regular';
     src: url('/gilroy-font/Gilroy-Regular.ttf');
@@ -462,6 +466,7 @@ footer form h6 {
     /* margin-bottom: 30px; */
 }
 
+.modalMainClass .modalMainClassR button,
 footer form .button {
     width: 100%;
     max-width: 100%;
@@ -681,16 +686,10 @@ footer form input {
     filter: brightness(0) invert(1);
 }
 
-.ourProductMainTargetDiv {
-    height: 100vh;
-}
-
-.ourProductMain {
-    height: 100vh;
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    align-items: center;
+.ourProductMainL h1 {
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .ourProductMainL h4 {
@@ -717,4 +716,360 @@ footer form input {
     line-height: 20.3px;
     text-align: justify;
     color: #555555;
+}
+
+/* Modal CSS */
+.modal-header {
+    border: none;
+    padding: 0;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modalMainClass .modalMainClassL {
+    display: grid;
+    place-content: center;
+    position: relative;
+    background: #F5F5F5;
+}
+
+.modalMainClass .modalMainClassL .madeByContent {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.modalMainClass .modalMainClassL span {
+    font-family: Gilroy-Medium;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;
+    color: #959595;
+    display: block;
+}
+
+.modalMainClass .modalMainClassL a {
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    color: #0068FF;
+    text-decoration: none;
+    display: block;
+}
+
+.modal.show .modal-dialog {
+    max-width: 60%;
+}
+
+.modalMainClass .modalMainClassR {
+    padding: 40px;
+}
+
+.modalMainClass .modalMainClassR form {
+    display: grid;
+    gap: 10px;
+}
+
+.modalMainClass .modalMainClassR h5 {
+    font-family: Gilroy-SemiBold;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.4px;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.modalMainClass .modalMainClassR label {
+    font-family: Gilroy-Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.56px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.modalMainClass .modalMainClassR input {
+    border: 1px solid #C2C2C2;
+    border-radius: 4px;
+    padding: 12px 10px;
+    font-family: Gilroy-Regular;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.4px;
+    color: #B3B3B3;
+    outline: none;
+}
+
+.modalMainClass .modalMainClassR .formInner {
+    display: flex;
+    flex-direction: column;
+}
+
+.modalMainClass .modalMainClassR button {
+    margin-top: 40px;
+}
+
+.modal-header .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+/* Products CSS */
+.productHeroMain {
+    display: grid;
+    place-content: center;
+    padding-top: 35px;
+}
+
+.productHeroMain h1 {
+    font-family: Gilroy-SemiBold;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44.1px;
+    text-align: center;
+    color: #000000;
+}
+
+.productHeroMain p {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.productHeroMain img {
+    max-width: 728px;
+    margin: 40px auto -20px;
+}
+
+.productHeroMain button {
+    margin: auto;
+}
+
+.productHeroMain span {
+    background: #006CFF10;
+    width: fit-content;
+    margin: auto;
+    display: inline-block;
+    padding: 4px 27px;
+    font-family: Gilroy-Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.56px;
+    color: #006CFF;
+    margin-bottom: 10px;
+}
+
+.productGridDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 56px 60px 40px;
+}
+
+.productGridDiv.darkBg {
+    background: #1F2E44;
+}
+
+.productGridDiv h5 {
+    font-family: Gilroy-SemiBold;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.4px;
+    margin: 14px 0 10px;
+    color: #333333;
+}
+
+.productGridDiv p {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    color: #444444;
+}
+
+.productGridDiv.darkBg h5,
+.productGridDiv.darkBg p {
+    color: #fff;
+}
+
+.productGridDiv.darkBg .productGridInner {
+    background: #FFFFFF21;
+    padding: 30px 40px;
+    border-radius: 10px;
+}
+
+.productBenefits .productGridDiv .productGridInner {
+    padding: 20px;
+    border-radius: 10px;
+    background: #F4F8FF;
+}
+
+.productBenefits .productGridDiv .productGridInner p {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: justify;
+}
+
+.productBlogSection {
+    background: #006CFF;
+    padding: 40px;
+    color: #fff;
+}
+
+.productBlogSection h4 {
+    font-family: Gilroy-SemiBold;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44.1px;
+}
+
+.productBlogSection a,
+.productBlogSection p {
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    margin: 20px 0 30px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.productBlogSection button {
+    display: block;
+    margin-top: 100px;
+}
+
+.productBlogSection img {
+    height: 420px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.faq {
+    background: #F4F8FF;
+    padding: 40px;
+}
+
+.faq .accordion {
+    max-width: 70%;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+}
+
+.faq .accordion-button:not(.collapsed),
+.faq .accordion-button.collapsed {
+    background: #FFFFFF;
+    padding: 16px 20px;
+    border-radius: 5px;
+    font-family: Gilroy-Medium;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #000000;
+    border: none;
+    box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+    background: #FFFFFF;
+    border: none;
+    box-shadow: none;
+    font-family: Gilroy-SemiBold;
+    color: #3D8CFE;
+    /* padding-bottom: 0; */
+}
+
+.faq .accordion-body {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #444444;
+    padding-top: 0;
+}
+
+.faq .accordion-button::after {
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 16 16'%3E%3Cpath fill='%233d8cfe' fill-rule='evenodd' d='m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z' clip-rule='evenodd'/%3E%3C/svg%3E") !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    box-shadow: 0px 5px 16px 0px #080F340F;
+    background: #fff;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: grid;
+    place-content: center;
+    padding: 5px;
+}
+
+.faq .accordion-button:not(.collapsed)::after {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 16 16'%3E%3Cpath fill='white' fill-rule='evenodd' d='m8 10.207l3.854-3.853l-.707-.708L8 8.793L4.854 5.646l-.708.708z' clip-rule='evenodd'/%3E%3C/svg%3E") !important;
+    background-color: #3D8CFE !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: grid;
+    place-content: center;
+    padding: 5px;
+}
+
+
+/* Test CSS */
+
+.productGallery {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+}
+
+.right {
+    height: 100vh;
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desktopContentSection {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.desktopPhotos {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 330px;
+    height: 100%;
+}
+
+.desktopPhoto {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    height: 90%;
+}
+
+.d-none-on-web {
+    display: none;
 }

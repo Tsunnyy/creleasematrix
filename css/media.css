@@ -1,4 +1,10 @@
 @media (max-width: 1199px) {
+    .modal.show .modal-dialog {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 1199px) {
     .whoWeServeGridInner {
         padding-right: 30px;
     }
@@ -42,11 +48,17 @@
 
     .title {
         font-size: 24px;
+        line-height: 24.4px;
     }
 
     .heroSectionL h1 {
         font-size: 26px;
         line-height: 30px;
+    }
+
+    .ourProductMainL img {
+        width: 40px;
+        margin: 15px 0 10px;
     }
 
     .heroSectionL .button {
@@ -100,5 +112,43 @@
     .whoWeServeGridInner {
         padding: 0;
         border: none;
+    }
+
+    .modalMainClass .modalMainClassL {
+        display: none;
+    }
+
+    .modalMainClass .modalMainClassR {
+        padding: 15px;
+    }
+
+    .modal.show .modal-dialog {
+        max-width: 100%;
+    }
+
+    .d-none-on-mod {
+        display: none;
+    }
+
+    .d-none-on-web {
+        display: block;
+    }
+
+    .d-none-on-web .swiper-pagination{
+        display: none;
+    }
+
+    .ourProductMain {
+        padding: 15px 25px 50px;
+    }
+
+    .ourProductMainL .button_group {
+        margin-top: 20px;
+    }
+
+    .ourProductMainL h4 {
+        font-size: 24px;
+        line-height: 28.2px;
+        margin: 0 0 10px;
     }
 }
