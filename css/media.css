@@ -39,6 +39,9 @@
         padding: 20px;
     }
 
+
+    .footerMainL,
+    .footerMainLSideL,
     .footerMainR,
     .footerMainLSideR,
     .heroSectionR,
@@ -134,7 +137,7 @@
         display: block;
     }
 
-    .d-none-on-web .swiper-pagination{
+    .d-none-on-web .swiper-pagination {
         display: none;
     }
 
@@ -150,5 +153,17 @@
         font-size: 24px;
         line-height: 28.2px;
         margin: 0 0 10px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer h4 {
+        margin-bottom: 10px;
+    }
+
+    .socialIcons {
+        margin-bottom: 15px;
     }
 }

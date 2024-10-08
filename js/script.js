@@ -1,9 +1,9 @@
 const lenis = new Lenis();
 
 // Listen for the scroll event and log the event data
-// lenis.on('scroll', (e) => {
-//     console.log(e);
-// });
+lenis.on('scroll', (e) => {
+    console.log(e);
+});
 
 // Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
@@ -382,61 +382,131 @@ tl.from(".heroSectionL p", {
     x: -50,
 })
 
-gsap.from(".whyLeaseMatrixSliderL > *", {
-    opacity: 0,
-    duration: 1.5,
-    stagger: 1,
-    scrollTrigger: {
-        trigger: ".whyLeaseMatrixSliderL",
-        start: "top 60%",
-        end: "bottom bottom",
-        // markers: true,
-        scrub: 5,
-    },
-}, "same")
+let mm = gsap.matchMedia();
 
-gsap.from(".whyLeaseMatrixSliderR img", {
-    opacity: 0,
-    duration: 1.5,
-    stagger: 1,
-    scrollTrigger: {
-        trigger: ".whyLeaseMatrixSliderR",
-        start: "top 60%",
-        end: "bottom bottom",
-        // markers: true,
-        scrub: 5,
-    },
-}, "same")
-
-const titles = gsap.utils.toArray(".title");
-
-titles.forEach((title) => {
-    gsap.from(title, {
+mm.add("(min-width: 767px)", () => {
+    gsap.from(".whyLeaseMatrixSliderL > *", {
         opacity: 0,
-        y: -50,
+        duration: 1.5,
+        stagger: 1,
         scrollTrigger: {
-            trigger: title,
-            start: "top 80%",
+            trigger: ".whyLeaseMatrixSliderL",
+            start: "top 60%",
+            end: "bottom bottom",
+            markers: true,
+            scrub: 5,
+        },
+    }, "same")
+
+    gsap.from(".whyLeaseMatrixSliderR img", {
+        opacity: 0,
+        duration: 1.5,
+        stagger: 1,
+        scrollTrigger: {
+            trigger: ".whyLeaseMatrixSliderR",
+            start: "top 60%",
             end: "bottom bottom",
             // markers: true,
             scrub: 5,
-            once: true,
         },
+    }, "same")
+
+    gsap.from(".ourClients .ourClientsInner", {
+        opacity: 0,
+        duration: 3000,
+        scrollTrigger: {
+            trigger: ".ourClients .ourClientsInner",
+            start: "top 80%",
+            end: "bottom bottom",
+            // markers: true,
+            stagger: 2,
+            scrub: 5,
+        }
     });
+
+    let howWeWorkDetailsH2 = gsap.utils.toArray(".howWeWorkDetails h2")
+    let howWeWorkDetailsP = gsap.utils.toArray(".howWeWorkDetails p")
+
+    howWeWorkDetailsP.forEach((howWeWorkDetailP) => {
+        gsap.from(howWeWorkDetailP, {
+            opacity: 0,
+            x: -50,
+            scrollTrigger: {
+                trigger: howWeWorkDetailP,
+                start: "top 80%",
+                end: "bottom bottom",
+                // markers: true,
+                scrub: 5,
+                once: true,
+            },
+        });
+    }, "z");
+
+    howWeWorkDetailsH2.forEach((howWeWorkDetailh2) => {
+        gsap.from(howWeWorkDetailh2, {
+            opacity: 0,
+            x: -50,
+            scrollTrigger: {
+                trigger: howWeWorkDetailh2,
+                start: "top 80%",
+                end: "bottom bottom",
+                // markers: true,
+                scrub: 5,
+                once: true,
+            },
+        });
+    }, "z");
+
+    gsap.from(".howWeWorkSlider-pagination .swiper-pagination-bullet", {
+        opacity: 0,
+        stagger: .5,
+        scrollTrigger: {
+            trigger: ".howWeWorkSlider-pagination",
+            start: "top 60%",
+            end: "bottom bottom",
+            // markers: true,
+            scrub: 2,
+            once: true,
+            yoyo: false
+        },
+    }, "z")
+
+    const titles = gsap.utils.toArray(".title");
+    titles.forEach((title) => {
+        gsap.from(title, {
+            opacity: 0,
+            y: -50,
+            scrollTrigger: {
+                trigger: title,
+                start: "top 80%",
+                end: "bottom bottom",
+                // markers: true,
+                scrub: 5,
+                once: true,
+            },
+        });
+    });
+    
+    gsap.from(".howWeWorkR img", {
+        opacity: 0,
+        x: 100,
+        duration: 1.5,
+        scrollTrigger: {
+            trigger: ".howWeWorkR",
+            start: "top 40%",
+            end: "bottom bottom",
+            // markers: true,
+            scrub: 2,
+            once: true,
+            yoyo: false
+        },
+    }, "z")
 });
 
-gsap.from(".ourClients .ourClientsInner", {
-    opacity: 0,
-    duration: 3000,
-    scrollTrigger: {
-        trigger: ".ourClients .ourClientsInner",
-        start: "top 80%",
-        end: "bottom bottom",
-        // markers: true,
-        stagger: 2,
-        scrub: 5,
-    }
-});
+
+
+
+
 
 
 gsap.from(".logo", {
@@ -449,67 +519,8 @@ gsap.from(".navbar-nav .nav-link", {
     stagger: .5,
 })
 
-gsap.from(".howWeWorkSlider-pagination .swiper-pagination-bullet", {
-    opacity: 0,
-    stagger: .5,
-    scrollTrigger: {
-        trigger: ".howWeWorkSlider-pagination",
-        start: "top 60%",
-        end: "bottom bottom",
-        // markers: true,
-        scrub: 2,
-        once: true,
-        yoyo: false
-    },
-}, "z")
 
-gsap.from(".howWeWorkR img", {
-    opacity: 0,
-    x: 100,
-    duration: 1.5,
-    scrollTrigger: {
-        trigger: ".howWeWorkR",
-        start: "top 40%",
-        end: "bottom bottom",
-        // markers: true,
-        scrub: 2,
-        once: true,
-        yoyo: false
-    },
-}, "z")
 
-let howWeWorkDetailsH2 = gsap.utils.toArray(".howWeWorkDetails h2")
-let howWeWorkDetailsP = gsap.utils.toArray(".howWeWorkDetails p")
-
-howWeWorkDetailsP.forEach((howWeWorkDetailP) => {
-    gsap.from(howWeWorkDetailP, {
-        opacity: 0,
-        x: -50,
-        scrollTrigger: {
-            trigger: howWeWorkDetailP,
-            start: "top 80%",
-            end: "bottom bottom",
-            // markers: true,
-            scrub: 5,
-            once: true,
-        },
-    });
-}, "z");
-
-howWeWorkDetailsH2.forEach((howWeWorkDetailh2) => {
-    gsap.from(howWeWorkDetailh2, {
-        opacity: 0,
-        x: -50,
-        scrollTrigger: {
-            trigger: howWeWorkDetailh2,
-            start: "top 80%",
-            end: "bottom bottom",
-            // markers: true,
-            scrub: 5,
-            once: true,
-        },
-    });
-}, "z");
 
 // Product SLider
 const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
