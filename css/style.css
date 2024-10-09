@@ -797,17 +797,83 @@ footer form input {
     margin-bottom: 4px;
 }
 
+.modalMainClass .modalMainClassR input::placeholder {
+    color: #B3B3B3;
+}
+
 .modalMainClass .modalMainClassR input {
     border: 1px solid #C2C2C2;
     border-radius: 4px;
     padding: 12px 10px;
     font-family: Gilroy-Regular;
     font-size: 12px;
+    color: #666666;
     font-weight: 400;
     line-height: 14.4px;
-    color: #B3B3B3;
     outline: none;
 }
+
+/* Select 2 */
+.select2-container {
+    z-index: 9991;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background: #006CFF;
+}
+
+.select2-results__option--selectable {
+    font-size: 14px;
+    padding: 8px;
+    transition: .2s all ease-in;
+    font-family: Gilroy-Medium;
+}
+
+.select2-container .select2-selection--multiple .select2-selection__rendered {
+    /* flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto; */
+    gap: 10px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    margin: 0 5px 5px 0;
+    padding: 5px;
+    background-color: #F5F5F5;
+    border: 1px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    width: fit-content;
+    font-size: 25px;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    z-index: 99;
+    height: fit-content;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display,
+.select2-container--default .select2-search--inline .select2-search__field{
+    height: 100%;
+    font-family: Gilroy-Regular;
+    font-size: 12px;
+    color: #666666;
+    font-weight: 400;
+    line-height: 14.4px;
+    outline: none;
+    /* margin-top: 0; */
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple.select2-selection--clearable{
+    padding: 10px 25px 10px 10px;
+}
+
+
+/* Select 2 */
 
 .modalMainClass .modalMainClassR .formInner {
     display: flex;

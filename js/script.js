@@ -58,7 +58,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 Resources
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Blogs</a></li>
+                                <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank">Blogs</a></li>
                                 <li><a class="dropdown-item" href="#">Case Studies</a></li>
                             </ul>
                         </li>
@@ -72,8 +72,8 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 Login
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Landlord</a></li>
-                                <li><a class="dropdown-item" href="#">Occupier</a></li>
+                                <li><a class="dropdown-item" href="https://landlord.creleasematrix.com/">Landlord</a></li>
+                                <li><a class="dropdown-item" href="https://occupier.creleasematrix.com/">Occupier</a></li>
                             </ul>
                         </li>
                     </div>
@@ -103,11 +103,21 @@ footer.innerHTML = `
                             </p>
 
                             <div class="d-flex gap-3 align-items-center socialIcons">
-                                <img src="/img/social/1.svg" alt="Social Media">
-                                <img src="/img/social/2.svg" alt="Social Media">
-                                <img src="/img/social/3.svg" alt="Social Media">
-                                <img src="/img/social/4.svg" alt="Social Media">
-                                <img src="/img/social/5.svg" alt="Social Media">
+                                <a href="" target="_blank">
+                                    <img src="/img/social/1.svg" alt="Social Media">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="/img/social/2.svg" alt="Social Media">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="/img/social/3.svg" alt="Social Media">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="/img/social/4.svg" alt="Social Media">
+                                </a>
+                                <a href="" target="_blank">
+                                    <img src="/img/social/5.svg" alt="Social Media">
+                                </a>
                             </div>
                         </div>
                         <div class="col-12 col-md-7 pe-0 footerMainLSideR">
@@ -116,16 +126,16 @@ footer.innerHTML = `
                                     <h4>Our Brands</h4>
                                     <ul>
                                         <li>
-                                            <a href="">CRE Matrix</a>
+                                            <a href="https://crematrix.com/" target="_blank">CRE Matrix</a>
                                         </li>
                                         <li>
-                                            <a href="">FloorTap</a>
+                                            <a href="https://floortap.com/" target="_blank">FloorTap</a>
                                         </li>
                                         <li>
-                                            <a href="">RAW</a>
+                                            <a href="https://crematrix.com/raw" target="_blank">RAW</a>
                                         </li>
                                         <li>
-                                            <a href="">IndexTap</a>
+                                            <a href="https://indextap.com/" target="_blank">IndexTap</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -133,7 +143,7 @@ footer.innerHTML = `
                                     <h4>Information</h4>
                                     <ul>
                                         <li>
-                                            <a href="">Blogs</a>
+                                            <a href="https://www.creleasematrix.com/blog/">Blogs</a>
                                         </li>
                                         <li>
                                             <a href="">Case Studies</a>
@@ -172,11 +182,11 @@ footer.innerHTML = `
                             </div>
                             <div class="form-fields">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" name="phone" placeholder="Enter Phone Number">
+                                <input type="tel" name="contact_number" placeholder="Enter Phone Number">
                             </div>
                             <div class="form-fields">
                                 <label for="email">Email Address</label>
-                                <input type="email" name="email" placeholder="Enter Email Address">
+                                <input type="email" name="email_id" placeholder="Enter Email Address">
                             </div>
                         </div>
                         <button type="submit" class="button bg-006CFF">Submit</button>
@@ -211,18 +221,18 @@ modal.innerHTML = `<div class="modal fade" id="bookaDemoModal" tabindex="-1" ari
                             </div>
                             <div class="col-12 col-md-6 modalMainClassR">
                                 <h5 class="text-center">Book a Demo</h5>
-                                <form>
+                                <form id="modalForm">
                                     <div class="formInner">
                                         <label for="fullname">Name</label>
-                                        <input type="text" required name="fullname" placeholder="Enter Full Name">
+                                        <input type="text" required name="name" placeholder="Enter Full Name">
                                     </div>
                                     <div class="formInner">
                                         <label for="email">Work Email</label>
-                                        <input type="email" required name="email" placeholder="Enter Email">
+                                        <input type="email" required name="email_id" placeholder="Enter Email">
                                     </div>
                                     <div class="formInner">
                                         <label for="phone">Phone Number</label>
-                                        <input type="number" required name="phone" placeholder="Enter Phone Number">
+                                        <input type="number" required name="contact_number" placeholder="Enter Phone Number">
                                     </div>
                                     <div class="formInner">
                                         <label for="company_name">Your Company</label>
@@ -235,7 +245,14 @@ modal.innerHTML = `<div class="modal fade" id="bookaDemoModal" tabindex="-1" ari
                                     </div>
                                     <div class="formInner">
                                         <label for="about_us">How did you Hear About Us ?</label>
-                                        <input type="text" required name="about_us">
+                                        <select class="abourUsDropdown" name="about[]" multiple="multiple">
+                                            <option value="email">Email</option>
+                                            <option value="events_and_conferences">Events and conferences</option>
+                                            <option value="google">Google</option>
+                                            <option value="others">Others</option>
+                                            <option value="social_media">Social media</option>
+                                            <option value="word_of_mouth">Word of mouth</option>
+                                        </select>
                                     </div>
 
                                     <button type="submit" class="button bg-006CFF">Book A demo</button>
@@ -247,6 +264,32 @@ modal.innerHTML = `<div class="modal fade" id="bookaDemoModal" tabindex="-1" ari
             </div>
         </div>`
 document.body.append(modal)
+
+$(document).ready(function () {
+    // $("form").submit(function (e) {
+    //     e.preventDefault();
+    //     console.log(e)
+    // });
+    $('.abourUsDropdown').select2({
+        allowClear: true,
+        placeholder: "Select"
+    });
+
+    $('#modalForm').on("submit", function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'https://api.creleasematrix.com/demo',
+            type: 'post',
+            dataType: 'json',
+            data: $('#modalForm').serialize(),
+            success: function (data) {
+                alert(data)
+                console.log(data)
+            }
+        });
+    });
+
+});
 
 // Logo Marquee
 const boxes = gsap.utils.toArray(".ourClientsInner");
@@ -393,7 +436,7 @@ mm.add("(min-width: 767px)", () => {
             trigger: ".whyLeaseMatrixSliderL",
             start: "top 60%",
             end: "bottom bottom",
-            markers: true,
+            // markers: true,
             scrub: 5,
         },
     }, "same")
@@ -486,7 +529,7 @@ mm.add("(min-width: 767px)", () => {
             },
         });
     });
-    
+
     gsap.from(".howWeWorkR img", {
         opacity: 0,
         x: 100,
@@ -501,6 +544,35 @@ mm.add("(min-width: 767px)", () => {
             yoyo: false
         },
     }, "z")
+
+    gsap.from(".whoWeServeGrid .whoWeServeGridInner", {
+        opacity: 0,
+        duration: 1.5,
+        stagger: 2,
+        scrollTrigger: {
+            trigger: ".whoWeServeGrid",
+            start: "top 40%",
+            end: "bottom bottom",
+            // markers: true,
+            scrub: 2,
+            once: true
+        },
+    })
+
+    gsap.from(".blogsGrid .blogsGridInner", {
+        opacity: 0,
+        y: 100,
+        duration: 1.5,
+        stagger: 2,
+        scrollTrigger: {
+            trigger: ".blogsGrid",
+            start: "top 40%",
+            end: "bottom bottom",
+            // markers: true,
+            scrub: 2,
+            once: true
+        },
+    })
 });
 
 
