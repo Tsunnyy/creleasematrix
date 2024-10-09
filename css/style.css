@@ -274,6 +274,45 @@ html {
     margin-top: 64px;
 }
 
+.heroSectionR .heroAfterImage {
+    position: absolute;
+    opacity: 0;
+}
+
+.heroSectionR .heroAfterImage1 {
+    max-width: 274px;
+    width: 100%;
+    object-fit: contain;
+    top: 20px;
+    right: -20px;
+}
+
+.heroSectionR .heroAfterImage2 {
+    max-width: 235px;
+    width: 100%;
+    object-fit: contain;
+    bottom: -40px;
+    left: 40px;
+}
+
+.heroSectionR .heroAfterImage3 {
+    max-width: 171px;
+    width: 100%;
+    object-fit: contain;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.heroSectionR .heroAfterImage4 {
+    max-width: 171px;
+    width: 100%;
+    object-fit: contain;
+    bottom: -40px;
+    right: 50px;
+}
+
 .desc {
     font-family: Gilroy-Regular;
     font-size: 14px;
@@ -856,7 +895,7 @@ footer form input {
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display,
-.select2-container--default .select2-search--inline .select2-search__field{
+.select2-container--default .select2-search--inline .select2-search__field {
     height: 100%;
     font-family: Gilroy-Regular;
     font-size: 12px;
@@ -868,7 +907,7 @@ footer form input {
 }
 
 .select2-container--default .select2-selection--multiple,
-.select2-container--default .select2-selection--multiple.select2-selection--clearable{
+.select2-container--default .select2-selection--multiple.select2-selection--clearable {
     padding: 10px 25px 10px 10px;
 }
 

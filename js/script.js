@@ -573,12 +573,34 @@ mm.add("(min-width: 767px)", () => {
             once: true
         },
     })
+
+    const heroImages = gsap.utils.toArray(".heroSectionR .heroAfterImage")
+
+    let imgTl = gsap.timeline()
+    imgTl.repeat(-1);
+
+    heroImages.forEach((heroImage, index) => {
+        imgTl.fromTo(heroImage,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 2,
+                stagger: 2,
+                onComplete: () => {
+                    gsap.to(heroImage, {
+                        opacity: 0,
+                        duration: 1,
+                    });
+                }
+
+            }
+        );
+    });
+
+
+
+
 });
-
-
-
-
-
 
 
 gsap.from(".logo", {
