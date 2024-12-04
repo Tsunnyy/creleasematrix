@@ -620,7 +620,7 @@ gsap.from(".navbar-nav .nav-link", {
 const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
 const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)")
 
-gsap.set(photos, { yPercent: 101 })
+gsap.set(photos, { yPercent: 0, opacity: 0 })
 
 const allPhotos = gsap.utils.toArray(".desktopPhoto")
 
@@ -634,7 +634,7 @@ ScrollTrigger.create({
 details.forEach((detail, index) => {
     let headline = detail.querySelector("h1");
     let animation = gsap.timeline()
-        .to(photos[index], { yPercent: 0 })
+        .to(photos[index], { yPercent: 0, opacity: 1 })
         .set(allPhotos[index], { autoAlpha: 0 });
 
     ScrollTrigger.create({

@@ -23,6 +23,33 @@
         font-size: 14.11px;
         line-height: 16.96px;
     }
+
+    .productHeroMain p {
+        max-width: 90%;
+        margin: 20px auto 30px;
+    }
+
+    .productHeroMain p br {
+        display: none;
+    }
+
+    .productHeroMain h1 {
+        font-size: 26px;
+        line-height: 30.1px;
+    }
+
+    .productGridDiv {
+        padding: 56px 20px 20px;
+    }
+
+    .productGridDiv.darkBg .productGridInner {
+        padding: 20px;
+    }
+
+    .productGridDiv h5 {
+        font-size: 20px;
+        line-height: 24.4px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -39,7 +66,6 @@
         padding: 20px;
     }
 
-
     .footerMainL,
     .footerMainLSideL,
     .footerMainR,
@@ -54,7 +80,7 @@
         line-height: 24.4px;
     }
 
-    .heroSectionR .heroAfterImage{
+    .heroSectionR .heroAfterImage {
         display: none;
     }
 
@@ -169,5 +195,46 @@
 
     .socialIcons {
         margin-bottom: 15px;
+    }
+
+    .productGridDiv {
+        grid-template-columns: 1fr;
+    }
+
+    /* .productBenefits, */
+    .faq,
+    .productBlogSection,
+    .productHeroMain {
+        padding: 15px;
+    }
+
+    .productHeroMain p {
+        max-width: 100%;
+        margin: 10px 0 20px;
+    }
+
+    .productHeroMain img {
+        max-width: 100%;
+    }
+
+    .productHeroMain h1 {
+        font-size: 16px;
+        line-height: 18.1px;
+    }
+
+    .productBlogSection button {
+        margin: 40px 0 20px;
+    }
+
+    .faq .accordion {
+        max-width: 100%;
+    }
+
+    .typo {
+        padding: 15px;
+    }
+
+    .productBenefits .productGridDiv {
+        padding-top: 20px;
     }
 }
