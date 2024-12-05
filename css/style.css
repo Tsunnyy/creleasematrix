@@ -1176,6 +1176,46 @@ footer form input {
     height: 90%;
 }
 
+.d-none-on-web-accordian,
 .d-none-on-web {
     display: none;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+.navbar-toggler,
+.navbar-nav .accordion-item,
+.navbar-nav .accordion-button:hover,
+.navbar-nav .accordion-button:focus,
+.navbar-nav .accordion-button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-nav .accordion-body {
+    padding: 0;
+}
+
+
+.navbar-nav .accordion-body .dropdown-item,
+.navbar-nav .accordion-button {
+    font-family: Gilroy-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #666666;
+    padding: 8px 0;
+    background: transparent;
+}
+
+.navbar-nav .accordion-body .dropdown-item {
+    color: #000000;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.navbar-nav .accordion-body .dropdown-item img {
+    max-width: 24px;
 }

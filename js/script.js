@@ -49,6 +49,48 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                         Reports</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item d-none-on-web-accordian">
+                            <div class="accordion" id="accordionExample">
+                             <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Products
+                                </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                    <li><a class="dropdown-item" href="/products/leadmanagement.html"><img src="/img/product/1.svg" alt="product Icon">
+                                        Lead Management</a></li>
+                                <li><a class="dropdown-item" href="/products/proposalmanagement.html"><img src="/img/product/2.svg" alt="product Icon">
+                                        Proposal Management (LOI)</a></li>
+                                <li><a class="dropdown-item" href="/products/inventorymanagement.html"><img src="/img/product/3.svg" alt="product Icon">
+                                        Inventory Management</a></li>
+                                <li><a class="dropdown-item" href="/products/leasemanagement.html"><img src="/img/product/4.svg" alt="product Icon">
+                                        Lease Management</a></li>
+                                <li><a class="dropdown-item" href="/products/reportsmanagement.html"><img src="/img/product/5.svg" alt="product Icon">
+                                        Reports</a></li>
+                                    </ul>   
+                                </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Resources
+                                </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank">Blogs</a></li>
+                                        <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                                    </ul>   
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#howItWorks">How it works</a>
                         </li>
@@ -103,20 +145,17 @@ footer.innerHTML = `
                             </p>
 
                             <div class="d-flex gap-3 align-items-center socialIcons">
-                                <a href="" target="_blank">
+                                <a href="https://www.facebook.com/CRELEASEMATRIX/" target="_blank">
                                     <img src="/img/social/1.svg" alt="Social Media">
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="https://www.instagram.com/cre_lease_matrix/" target="_blank">
                                     <img src="/img/social/2.svg" alt="Social Media">
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="https://www.linkedin.com/company/cre-lease-matrix/" target="_blank">
                                     <img src="/img/social/3.svg" alt="Social Media">
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcreleasematrix" target="_blank">
                                     <img src="/img/social/4.svg" alt="Social Media">
-                                </a>
-                                <a href="" target="_blank">
-                                    <img src="/img/social/5.svg" alt="Social Media">
                                 </a>
                             </div>
                         </div>

@@ -50,11 +50,28 @@
         font-size: 20px;
         line-height: 24.4px;
     }
+
+    .d-none-on-web-accordian {
+        display: block;
+    }
+
+    .navbar-nav .nav-item:nth-child(2),
+    .navbar-nav .nav-item:last-child {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
     .padding-class-20 {
         padding: 15px;
+    }
+
+    .navbar .container-fluid {
+        gap: 30px;
+    }
+
+    .button {
+        width: 130px;
     }
 
     footer {
