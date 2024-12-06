@@ -636,9 +636,6 @@ mm.add("(min-width: 767px)", () => {
         );
     });
 
-
-
-
 });
 
 
@@ -709,4 +706,38 @@ details.forEach((detail, index) => {
             ScrollTrigger.getAll().forEach(st => st.resume());
         }
     });
+});
+
+
+
+gsap.utils.toArray(".split-screen").forEach((section, index) => {
+    const leftSide = section.querySelector(".left-side");
+    const rightSide = section.querySelector(".right-side");
+    const content = section.querySelector(".content");
+
+    gsap.to(leftSide, {
+        scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            scrub: 1,
+            markers: false
+        }
+    });
+
+
+    gsap.fromTo(content,
+        { opacity: 0, y: 100 },
+        {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: {
+                trigger: section,
+                start: "top center",
+                end: "bottom top",
+                scrub: true,
+                markers: false
+            }
+        });
 });

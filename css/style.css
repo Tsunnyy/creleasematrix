@@ -685,11 +685,11 @@ footer form input {
     color: #000000;
 }
 
-.ourProductMain {
+/* .ourProductMain {
     padding: 60px 30px;
     background: #F5F5F5;
     border-radius: 8px;
-}
+} */
 
 .dropdown-menu {
     padding: 8px;
@@ -1137,7 +1137,7 @@ footer form input {
 
 /* Test CSS */
 
-.productGallery {
+/* .productGallery {
     display: grid;
     place-content: center;
     grid-template-columns: repeat(2, 1fr);
@@ -1146,7 +1146,7 @@ footer form input {
 
 .right {
     height: 100vh;
-    /* width: 50%; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1174,7 +1174,7 @@ footer form input {
     display: grid;
     place-content: center;
     height: 90%;
-}
+} */
 
 .d-none-on-web-accordian,
 .d-none-on-web {
@@ -1218,4 +1218,43 @@ footer form input {
 
 .navbar-nav .accordion-body .dropdown-item img {
     max-width: 24px;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.split-screen {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-side {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+
+.left-side img {
+    width: 100%;
+    object-fit: cover;
+    height: 345px;
+    max-width: 619px;
+}
+
+.right-side {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.content {
+    font-size: 2em;
+    text-align: center;
 }
