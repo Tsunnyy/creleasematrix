@@ -1317,6 +1317,7 @@ footer form input {
     margin-bottom: 0
 }
 
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
 .scroll-reveal-section .item:last-of-type:after {
     display: none
 }
