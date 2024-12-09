@@ -176,6 +176,7 @@
         max-width: 100%;
     }
 
+    .ourProductMainParent,
     .d-none-on-mod {
         display: none;
     }

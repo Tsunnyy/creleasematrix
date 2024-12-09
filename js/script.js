@@ -212,20 +212,20 @@ footer.innerHTML = `
                     </div>
                 </div>
                 <div class="col-12 col-md-4 pe-0 footerMainR">
-                    <form>
+                    <form id="miniForm">
                         <h6>Request Demo</h6>
                         <div class="formMain">
                             <div class="form-fields">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" placeholder="Enter Full Name">
+                                <input type="text" required name="name" placeholder="Enter Full Name">
                             </div>
                             <div class="form-fields">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" name="contact_number" placeholder="Enter Phone Number">
+                                <input type="tel" required name="contact_number" placeholder="Enter Phone Number">
                             </div>
                             <div class="form-fields">
                                 <label for="email">Email Address</label>
-                                <input type="email" name="email_id" placeholder="Enter Email Address">
+                                <input type="email" required name="email_id" placeholder="Enter Email Address">
                             </div>
                         </div>
                         <button type="submit" class="button bg-006CFF">Submit</button>
@@ -258,8 +258,11 @@ modal.innerHTML = `<div class="modal fade" id="bookaDemoModal" tabindex="-1" ari
                                     <a href="https://crematrix.com/" target="_blank">CRE MATRIX</a>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 modalMainClassR">
+                            <div class="col-12 col-md-6 modalMainClassR position-relative">
                                 <h5 class="text-center">Book a Demo</h5>
+                                <div class="loader-parent">
+                                    <span class="loader"></span>
+                                </div>
                                 <form id="modalForm">
                                     <div class="formInner">
                                         <label for="fullname">Name</label>
@@ -305,10 +308,6 @@ modal.innerHTML = `<div class="modal fade" id="bookaDemoModal" tabindex="-1" ari
 document.body.append(modal)
 
 $(document).ready(function () {
-    // $("form").submit(function (e) {
-    //     e.preventDefault();
-    //     console.log(e)
-    // });
     $('.abourUsDropdown').select2({
         allowClear: true,
         placeholder: "Select"
@@ -316,19 +315,41 @@ $(document).ready(function () {
 
     $('#modalForm').on("submit", function (e) {
         e.preventDefault();
+        $(".loader-parent").css("visibility", "visible");
         $.ajax({
             url: 'https://api.creleasematrix.com/demo',
             type: 'post',
             dataType: 'json',
             data: $('#modalForm').serialize(),
             success: function (data) {
-                alert(data)
-                console.log(data)
+                let input = $('#modalForm input')
+                for (let i = 0; i < input.length; i++) {
+                    $(input[i]).val("")
+                    $('.abourUsDropdown').val('').trigger("change");
+                    $('.modal').modal('hide')
+                }
+                $(".loader-parent").css("visibility", "hidden");
             }
         });
     });
-
 });
+
+$('#miniForm').on("submit", function (e) {
+    e.preventDefault();
+    // $.ajax({
+    //     url: 'https://api.creleasematrix.com/demo',
+    //     type: 'post',
+    //     dataType: 'json',
+    //     data: $('#miniForm').serialize(),
+    //     success: function (data) {
+    //         let input = $('#miniForm input')
+    //         for (let i = 0; i < input.length; i++) {
+    //             $(input[i]).val("")
+    //         }
+    //     }
+    // });
+});
+
 
 // Logo Marquee
 const boxes = gsap.utils.toArray(".ourClientsInner");
@@ -708,36 +729,60 @@ details.forEach((detail, index) => {
     });
 });
 
-
-
-gsap.utils.toArray(".split-screen").forEach((section, index) => {
-    const leftSide = section.querySelector(".left-side");
-    const rightSide = section.querySelector(".right-side");
-    const content = section.querySelector(".content");
-
-    gsap.to(leftSide, {
-        scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom top",
-            pin: true,
-            scrub: 1,
-            markers: false
-        }
+if (!window.location.href.indexOf("blog") > -1) {
+    ScrollTrigger.defaults({
+        markers: false
     });
+    if ($(window).width() > 1001) {
+        if (window.location.pathname == '/ ' || window.location.pathname == '/pt/ ') {
+            gsap.set(".home-popup", { xPercent: 0, yPercent: 0 }),
+                gsap.to(".home-popup", {
+                    scale: 1.13, x: 0, scrollTrigger: {
+                        trigger: ".home-popup",
+                        markers: false,
+                        start: "center center",
+                        end: "+=400",
+                        pin: ".home-popup",
+                        id: "home-popup",
+                        scrub: 0.5
+                    }
+                });
+        }
 
-
-    gsap.fromTo(content,
-        { opacity: 0, y: 100 },
-        {
-            opacity: 1,
-            y: 0,
+        var itemsList = gsap.utils.toArray('.scroll-reveal-section .item ');
+        var height = 100 * itemsList.length;
+        var ts = gsap.timeline({
+            duration: itemsList.length,
             scrollTrigger: {
-                trigger: section,
-                start: "top center",
-                end: "bottom top",
-                scrub: true,
+                trigger: ".scroll-reveal-section",
+                start: "-20% center",
+                end: "+=" + height + "%",
+                scrub: 0,
+                id: "itemsList",
+            }
+        });
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".scroll-reveal-section",
+                start: "top top",
+                end: "+=" + height + "%",
+                pin: ".scroll-reveal-section",
+                id: "pinning",
+                scrub: 0,
                 markers: false
             }
         });
-});
+
+        itemsList.forEach(function (elem, i) {
+            gsap.set(elem, { position: "absolute", top: 0 });
+            ts.from(elem.querySelector('.image-holder '), { autoAlpha: 0 }, i)
+            ts.from(elem.querySelector('.text-holder '), { autoAlpha: 0, translateY: 100 }, i)
+
+            if (i != itemsList.length - 1) {
+                ts.to(elem.querySelector('.text-holder '), { autoAlpha: 0, translateY: -210 }, i + 0.75)
+                ts.to(elem.querySelector('.image-holder '), { autoAlpha: 0 }, i + 0.75)
+            }
+        });
+    }
+}
