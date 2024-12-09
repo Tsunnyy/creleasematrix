@@ -664,7 +664,7 @@ footer form input {
 }
 
 .howWeWorkDetails {
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .howWeWorkDetails h2 {
@@ -1352,4 +1352,42 @@ footer form input {
     position: absolute;
     right: 0;
     z-index: 2
+}
+
+.formMainGird {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.formMainGird .select2-container {
+    width: 100% !important;
+}
+
+.formMainGird .select2-container .select2-selection--multiple {
+    background: #F9F9F9;
+    border: none;
+}
+
+.formMainGird .formInner:last-child {
+    grid-column: span 2;
+}
+
+.alert {
+    position: fixed;
+    right: -500px;
+    top: 50px;
+    width: fit-content;
+    z-index: 99;
+    font-family: Gilroy-SemiBold;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: justify;
+    color: #333333;
+    transition: .5s all;
+}
+
+.alert.active {
+    right: 0;
 }

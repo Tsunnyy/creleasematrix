@@ -211,21 +211,44 @@ footer.innerHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 pe-0 footerMainR">
+                <div class="col-12 col-md-4 pe-0 footerMainR position-relative">
+                    <div class="loader-parent">
+                        <span class="loader"></span>
+                    </div>
                     <form id="miniForm">
                         <h6>Request Demo</h6>
-                        <div class="formMain">
-                            <div class="form-fields">
-                                <label for="name">Name</label>
+                        <div class="formMain formMainGird">
+                            <div class="formInner">
+                                <label for="fullname">Name</label>
                                 <input type="text" required name="name" placeholder="Enter Full Name">
                             </div>
-                            <div class="form-fields">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" required name="contact_number" placeholder="Enter Phone Number">
+                            <div class="formInner">
+                                <label for="email">Work Email</label>
+                                <input type="email" required name="email_id" placeholder="Enter Email">
                             </div>
-                            <div class="form-fields">
-                                <label for="email">Email Address</label>
-                                <input type="email" required name="email_id" placeholder="Enter Email Address">
+                            <div class="formInner">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" required name="contact_number" placeholder="Enter Phone Number">
+                            </div>
+                            <div class="formInner">
+                                <label for="company_name">Your Company</label>
+                                <input type="text" required name="company_name"
+                                    placeholder="Enter Company Name">
+                            </div>
+                            <div class="formInner">
+                                <label for="designation">Your Designation ( Optional )</label>
+                                <input type="text" name="designation" placeholder="Enter Designation">
+                            </div>
+                            <div class="formInner">
+                                <label for="about_us">How did you Hear About Us ?</label>
+                                <select class="abourUsDropdown" name="about[]" multiple="multiple">
+                                    <option value="email">Email</option>
+                                    <option value="events_and_conferences">Events and conferences</option>
+                                    <option value="google">Google</option>
+                                    <option value="others">Others</option>
+                                    <option value="social_media">Social media</option>
+                                    <option value="word_of_mouth">Word of mouth</option>
+                                </select>
                             </div>
                         </div>
                         <button type="submit" class="button bg-006CFF">Submit</button>
@@ -313,42 +336,59 @@ $(document).ready(function () {
         placeholder: "Select"
     });
 
-    $('#modalForm').on("submit", function (e) {
+    // $('#modalForm').on("submit", function (e) {
+    //     e.preventDefault();
+    //     $(".loader-parent").css("visibility", "visible");
+    //     $.ajax({
+    //         url: 'https://api.creleasematrix.com/demo',
+    //         type: 'post',
+    //         dataType: 'json',
+    //         data: $('#modalForm').serialize(),
+    //         success: function (data) {
+    //             let input = $('#modalForm input')
+    //             for (let i = 0; i < input.length; i++) {
+    //                 $(input[i]).val("")
+    //                 $('.abourUsDropdown').val('').trigger("change");
+    //                 $('.modal').modal('hide')
+    //             }
+    //             $(".loader-parent").css("visibility", "hidden");
+    //         }
+    //     });
+    // });
+});
+
+
+function handleFormSubmit(formId) {
+    $(formId).on("submit", function (e) {
         e.preventDefault();
         $(".loader-parent").css("visibility", "visible");
+
         $.ajax({
             url: 'https://api.creleasematrix.com/demo',
             type: 'post',
             dataType: 'json',
-            data: $('#modalForm').serialize(),
+            data: $(formId).serialize(),
             success: function (data) {
-                let input = $('#modalForm input')
+                let input = $(formId + ' input');
                 for (let i = 0; i < input.length; i++) {
-                    $(input[i]).val("")
-                    $('.abourUsDropdown').val('').trigger("change");
-                    $('.modal').modal('hide')
+                    $(input[i]).val("");  // Clear input fields
                 }
+                $('.abourUsDropdown').val('').trigger("change");
+                $('.modal').modal('hide');
+
                 $(".loader-parent").css("visibility", "hidden");
+                $(".alert").addClass("active");
+                setTimeout(() => {
+                    $(".alert").removeClass("active");
+                }, 5000);
             }
         });
     });
-});
+}
 
-$('#miniForm').on("submit", function (e) {
-    e.preventDefault();
-    // $.ajax({
-    //     url: 'https://api.creleasematrix.com/demo',
-    //     type: 'post',
-    //     dataType: 'json',
-    //     data: $('#miniForm').serialize(),
-    //     success: function (data) {
-    //         let input = $('#miniForm input')
-    //         for (let i = 0; i < input.length; i++) {
-    //             $(input[i]).val("")
-    //         }
-    //     }
-    // });
-});
+handleFormSubmit('#modalForm');
+handleFormSubmit('#miniForm');
+
 
 
 // Logo Marquee
