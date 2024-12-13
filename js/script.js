@@ -457,20 +457,30 @@ function horizontalLoop(items, config) {
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     centeredSlides: true,
+    effect: 'fade', // Enable fade effect
+    fadeEffect: {
+        crossFade: true // Enable crossfade between slides
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
     },
+    speed: 1000,
+    easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
 });
 
 // Product Slider
 var swiper = new Swiper(".productSliderOnMob", {
     spaceBetween: 30,
     centeredSlides: true,
+    effect: 'fade', // Enable fade effect
+    fadeEffect: {
+        crossFade: true // Enable crossfade between slides
+    },
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -483,12 +493,18 @@ var swiper = new Swiper(".productSliderOnMob", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    speed: 1000,
+    easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
 });
 
 var menu = ["1", "2", "3", "4", "5"];
 var howWeWorkSlider = new Swiper(".howWeWorkSlider", {
     slidesPerView: 1,
     centeredSlides: true,
+    effect: 'fade', // Enable fade effect
+    fadeEffect: {
+        crossFade: true // Enable crossfade between slides
+    },
     pagination: {
         el: ".howWeWorkSlider-pagination",
         clickable: true,
@@ -500,6 +516,8 @@ var howWeWorkSlider = new Swiper(".howWeWorkSlider", {
         delay: 5000,
         disableOnInteraction: false
     },
+    speed: 1000,
+    easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
 });
 
 // Gsap 
