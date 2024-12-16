@@ -215,6 +215,11 @@ html {
     text-decoration: none;
 }
 
+.navbar-nav .nav-item.active .nav-link {
+    font-family: Gilroy-SemiBold;
+    color: #0068FF;
+}
+
 .dropdown .nav-link.dropdown-toggle.show,
 .dropdown:hover,
 .dropdown:focus {
@@ -239,6 +244,7 @@ html {
     display: inline-block;
     text-decoration: none;
     transition: .2s all ease-in-out;
+    text-transform: uppercase;
 }
 
 
@@ -256,8 +262,18 @@ html {
     color: #FFFFFF;
 }
 
+.button.bg-006CFF:hover {
+    box-shadow: #006CFF 0px 1px 4px;
+}
+
 .nav-item.dropdown.button:hover {
     border: 1px solid #006CFF;
+}
+
+.button.bg-A9A9A933 {
+    background: #A9A9A933;
+    border: 1px solid #A9A9A933;
+    color: #333333;
 }
 
 .heroSection {
@@ -272,7 +288,7 @@ html {
     font-weight: 400;
     line-height: 50.4px;
     color: #333333;
-    margin: 4px 0;
+    margin: 4px 0 10px;
 }
 
 .heroSectionL .button {
@@ -322,7 +338,7 @@ html {
     font-family: Gilroy-Regular;
     font-size: 14px;
     font-weight: 400;
-    line-height: 16.8px;
+    line-height: 20px;
     text-align: justify;
     color: #666666;
 }
@@ -413,6 +429,21 @@ html {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 40px;
+}
+
+.blogsGrid span {
+    position: absolute;
+    bottom: 29px;
+    left: 0;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 7px 20px;
+    display: inline-block;
+    background: #333333b1;
+    border-radius: 0 4px 4px 0;
 }
 
 .blogsGrid img {
@@ -509,6 +540,7 @@ footer form h6 {
     border-bottom: 1px solid #F5F5F5;
     padding-bottom: 10px;
     /* margin-bottom: 30px; */
+    text-transform: uppercase;
 }
 
 footer form .form-fields {
@@ -1062,6 +1094,10 @@ footer form input {
     text-decoration: none;
 }
 
+.productBlogSection a {
+    font-family: Gilroy-Bold;
+}
+
 .productBlogSection button {
     display: block;
     margin-top: 100px;
@@ -1341,9 +1377,10 @@ footer form input {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 100%;
-    object-fit: cover;
-    height: 345px;
+    object-fit: contain;
     max-width: 619px;
+    height: 332px;
+    scale: unset !important;
 }
 
 
@@ -1397,4 +1434,18 @@ footer form input {
 
 .alert.active {
     right: 0;
+}
+
+.footerMainLSideR {
+    position: relative;
+}
+
+.footerMainLSideR::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    height: 100%;
+    width: 1px;
+    background: #666666;
 }

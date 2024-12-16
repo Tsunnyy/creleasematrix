@@ -1,9 +1,9 @@
 const lenis = new Lenis();
 
 // Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-    console.log(e);
-});
+// lenis.on('scroll', (e) => {
+//     console.log(e);
+// });
 
 // Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
@@ -28,7 +28,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link active" aria-current="page" href="#whyLeaseMatrix">Why Lease Matrix?</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -160,7 +160,7 @@ footer.innerHTML = `
                             </div>
                         </div>
                         <div class="col-12 col-md-7 pe-0 footerMainLSideR">
-                            <div class="row m-0">
+                            <div class="row m-0 justify-content-end">
                                 <div class="col-12 col-md-3 p-0">
                                     <h4>Our Brands</h4>
                                     <ul>
@@ -405,7 +405,7 @@ function horizontalLoop(items, config) {
         widths = [],
         xPercents = [],
         curIndex = 0,
-        pixelsPerSecond = (config.speed || 1) * 100,
+        pixelsPerSecond = (config.speed || 1) * 50,
         snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
         totalWidth, curX, distanceToStart, distanceToLoop, item, i;
     gsap.set(items, { // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
@@ -500,6 +500,7 @@ var swiper = new Swiper(".productSliderOnMob", {
 var menu = ["1", "2", "3", "4", "5"];
 var howWeWorkSlider = new Swiper(".howWeWorkSlider", {
     slidesPerView: 1,
+    initialSlide: 1,
     centeredSlides: true,
     effect: 'fade', // Enable fade effect
     fadeEffect: {
@@ -519,6 +520,10 @@ var howWeWorkSlider = new Swiper(".howWeWorkSlider", {
     speed: 1000,
     easing: 'cubic-bezier(0.25, 0.8, 0.25, 1)',
 });
+
+$('.navbar li').on('click', function () {
+    $(this).addClass('active').siblings().removeClass('active');
+})
 
 // Gsap 
 gsap.registerPlugin(ScrollTrigger);
@@ -795,7 +800,7 @@ if (!window.location.href.indexOf("blog") > -1) {
         if (window.location.pathname == '/ ' || window.location.pathname == '/pt/ ') {
             gsap.set(".home-popup", { xPercent: 0, yPercent: 0 }),
                 gsap.to(".home-popup", {
-                    scale: 1.13, x: 0, scrollTrigger: {
+                    x: 0, scrollTrigger: {
                         trigger: ".home-popup",
                         markers: false,
                         start: "center center",

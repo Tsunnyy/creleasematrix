@@ -164,6 +164,7 @@
         border: none;
     }
 
+    .footerMainLSideR::after,
     .modalMainClass .modalMainClassL {
         display: none;
     }
