@@ -12,12 +12,6 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/media.css">
     <title>Inventory Management</title>
-    <style>
-        .navbar-nav .nav-item:nth-child(4),
-        .navbar-nav .nav-item:nth-child(1) {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -180,6 +174,18 @@
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.navbar-nav .nav-item').on('click', function (e) {
+                var navLink = $(this).find('.nav-link');
+                if (navLink.text().trim() === "Why Lease Matrix?" || navLink.text().trim() === "How it works") {
+                    navLink.attr('href', '/');
+                }
+            });
+            $('.nav-item').removeClass('active');
+            $('.nav-item.productDropDown').addClass('active');
+        })
+    </script>
 </body>
 
 </html>

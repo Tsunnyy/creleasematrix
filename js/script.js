@@ -31,7 +31,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                         <li class="nav-item active">
                             <a class="nav-link active" aria-current="page" href="#whyLeaseMatrix">Why Lease Matrix?</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown productDropDown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Products
@@ -83,8 +83,8 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul>
-                                        <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank">Blogs</a></li>
-                                        <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                                        <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank"><img src="/img/product/r_1.svg" alt="product Icon"> Blogs</a></li>
+                                        <li><a class="dropdown-item" href="#"><img src="/img/product/r_2.svg" alt="product Icon"> Case Studies</a></li>
                                     </ul>   
                                 </div>
                                 </div>
@@ -94,14 +94,14 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                         <li class="nav-item">
                             <a class="nav-link" href="#howItWorks">How it works</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown resourceDropDown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Resources
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank">Blogs</a></li>
-                                <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                                <li><a class="dropdown-item" href="https://www.creleasematrix.com/blog/" target="_blank"><img src="/img/product/r_1.svg" alt="product Icon">Blogs</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="/img/product/r_2.svg" alt="product Icon">Case Studies</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -114,8 +114,8 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 Login
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://landlord.creleasematrix.com/">Landlord</a></li>
-                                <li><a class="dropdown-item" href="https://occupier.creleasematrix.com/">Occupier</a></li>
+                                <li><a class="dropdown-item" href="https://landlord.creleasematrix.com/"><img src="/img/product/land.svg" alt="product Icon">Landlord</a></li>
+                                <li><a class="dropdown-item" href="https://occupier.creleasematrix.com/"><img src="/img/product/occ.svg" alt="product Icon">Occupier</a></li>
                             </ul>
                         </li>
                     </div>
@@ -707,12 +707,13 @@ mm.add("(min-width: 767px)", () => {
             { opacity: 0 },
             {
                 opacity: 1,
-                duration: 2,
+                duration: 3,
                 stagger: 2,
                 onComplete: () => {
                     gsap.to(heroImage, {
                         opacity: 0,
-                        duration: 1,
+                        duration: 2,
+                        delay: 1,
                     });
                 }
 

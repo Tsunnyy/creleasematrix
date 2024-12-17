@@ -301,7 +301,7 @@ html {
 }
 
 .heroSectionR .heroAfterImage1 {
-    max-width: 274px;
+    max-width: 300px;
     width: 100%;
     object-fit: contain;
     top: 20px;
@@ -309,7 +309,7 @@ html {
 }
 
 .heroSectionR .heroAfterImage2 {
-    max-width: 235px;
+    max-width: 270px;
     width: 100%;
     object-fit: contain;
     bottom: -40px;
@@ -317,7 +317,7 @@ html {
 }
 
 .heroSectionR .heroAfterImage3 {
-    max-width: 171px;
+    max-width: 240px;
     width: 100%;
     object-fit: contain;
     top: -40px;
@@ -327,7 +327,7 @@ html {
 }
 
 .heroSectionR .heroAfterImage4 {
-    max-width: 171px;
+    max-width: 201px;
     width: 100%;
     object-fit: contain;
     bottom: -40px;
@@ -646,7 +646,8 @@ footer form input {
 
 .whyLeaseMatrixSlider .whyLeaseMatrixSliderR img {
     height: 380px;
-    object-fit: cover;
+    object-fit: contain;
+    width: 100%;
 }
 
 .whyLeaseMatrixSlider .whyLeaseMatrixSliderL img {
@@ -1373,14 +1374,14 @@ footer form input {
 
 .scroll-reveal-section .item .image-holder img {
     position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 55%;
+    -ms-transform: translateY(-52%);
+    transform: translateY(-52%);
     width: 100%;
     object-fit: contain;
     max-width: 619px;
     height: 332px;
-    scale: unset !important;
+    scale: 1.2 !important;
 }
 
 
@@ -1390,7 +1391,7 @@ footer form input {
     justify-content: center;
     width: 50%;
     min-height: 100vh;
-    padding-left: 80px;
+    padding-left: 40px;
     padding-right: 93px;
     position: absolute;
     right: 0;
@@ -1447,5 +1448,5 @@ footer form input {
     left: 25px;
     height: 100%;
     width: 1px;
-    background: #666666;
+    background: #c2c2c2;
 }
