@@ -29,7 +29,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link active" aria-current="page" href="#whyLeaseMatrix">Why Lease Matrix?</a>
+                            <a class="nav-link active" aria-current="page" href="#ourClientsId">Why Lease Matrix?</a>
                         </li>
                         <li class="nav-item dropdown productDropDown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,11 +53,11 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                             <div class="accordion" id="accordionExample">
                              <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     Products
                                 </button>
                                 </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     <ul>
                                     <li><a class="dropdown-item" href="/products/leadmanagement.html"><img src="/img/product/1.svg" alt="product Icon">

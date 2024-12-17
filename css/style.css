@@ -189,6 +189,10 @@ html {
     padding: 30px 60px;
 }
 
+.padding-class-20.latestBlog {
+    background: #F4F8FF;
+}
+
 .navbar {
     padding: 25px 58px;
     box-shadow: 0px 2px 5px 0px #0000000D;
@@ -402,6 +406,7 @@ html {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 60px;
+    margin-top: 50px;
 }
 
 .whoWeServeGridInner {
@@ -1449,4 +1454,8 @@ footer form input {
     height: 100%;
     width: 1px;
     background: #c2c2c2;
+}
+
+.productImageForMob {
+    display: none;
 }

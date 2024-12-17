@@ -36,6 +36,15 @@
     .productHeroMain h1 {
         font-size: 26px;
         line-height: 30.1px;
+        text-align: left;
+    }
+
+    .productHeroMain h1 br {
+        display: none;
+    }
+
+    .productHeroMain img {
+        margin: 40px auto -40px;
     }
 
     .productGridDiv {
@@ -93,8 +102,14 @@
     }
 
     .title {
-        font-size: 24px;
-        line-height: 24.4px;
+        font-size: 18px;
+        line-height: 16.4px;
+    }
+
+    .howWeWorkSlider-pagination .swiper-pagination-bullet {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
     }
 
     .heroSectionR .heroAfterImage {
@@ -103,12 +118,17 @@
 
     .heroSectionL h1 {
         font-size: 26px;
-        line-height: 30px;
+        line-height: 26px;
+    }
+
+    .ourProductMainL p,
+    .desc {
+        line-height: 18px;
     }
 
     .ourProductMainL img {
-        width: 40px;
-        margin: 15px 0 10px;
+        width: 32px;
+        margin: 15px 0 0;
     }
 
     .heroSectionL .button {
@@ -125,13 +145,58 @@
         padding: 20px;
     }
 
+    .productGridDiv h5 {
+        font-size: 16px;
+        line-height: 14.4px;
+        margin: 10px 0px;
+    }
+
     .whyLeaseMatrixSlider {
-        padding: 40px 0;
+        padding: 20px 0 40px;
     }
 
     .whyLeaseMatrixSlider .whyLeaseMatrixSliderR img {
-        height: 280px;
+        height: 200px;
         margin-top: 20px;
+    }
+
+    .productBenefits .desc {
+        text-align: left !important;
+    }
+
+    .productBenefits .productGridDiv .productGridInner {
+        border-radius: 20px;
+    }
+
+    .productBenefits .productGridDiv .productGridInner h5 {
+        font-size: 20px;
+        margin: 10px 0 15px;
+    }
+
+    .productBlogSection p {
+        line-height: 19px;
+        margin: 10px 0;
+    }
+
+    .productBlogSectionMain{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .productBlogSection img {
+        height: 250px;
+        height: 170px;
+        margin-top: 20px;
+    }
+
+    .productBlogSection h4 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .faq .accordion-body,
+    .faq .accordion-button:not(.collapsed), .faq .accordion-button.collapsed{
+        line-height: 18px;
     }
 
     footer form {
@@ -139,8 +204,9 @@
     }
 
     .whyLeaseMatrixSlider .whyLeaseMatrixSliderL h2 {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 27.2px;
+        margin: 10px 0;
     }
 
     .howWeWorkDetails .button {
@@ -148,20 +214,75 @@
     }
 
     .blogsGrid {
-        grid-template-columns: 1fr;
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .blogsGridInner {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .blogsGrid .blogsDetails h5 {
+        font-size: 14px;
+    }
+
+    .blogsGrid .blogsDetails {
+        padding: 10px;
+    }
+
+    .blogsGrid span {
+        font-family: Gilroy-Regular;
+        bottom: 20px;
+        font-size: 12px;
     }
 
     .blogsGrid img {
         width: 100%;
+        height: 170px;
+    }
+
+    .whoWeServe {
+        padding: 38px 20px;
     }
 
     .whoWeServeGrid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 30px;
+        gap: 20px;
+        text-align: left;
+    }
+
+    .whoWeServeGridInner img {
+        width: 32px;
+        height: 32px;
     }
 
     .whoWeServeGridInner {
         padding: 0;
         border: none;
+    }
+
+    .whoWeServe .container {
+        padding: 0;
+    }
+
+    .title {
+        text-align: left;
+        margin-bottom: 15px !important;
+    }
+
+    .ourClientTitle {
+        padding-left: 15px;
+    }
+
+    .ourClients {
+        gap: 20px;
+    }
+
+    .howCreLeaseMatrixWorksPadding {
+        padding-top: 30px;
     }
 
     .footerMainLSideR::after,
@@ -191,21 +312,76 @@
     }
 
     .ourProductMain {
-        padding: 15px 25px 50px;
+        padding: 15px 15px 50px;
+    }
+
+    .whoWeServeGrid p {
+        font-size: 12px;
+        line-height: 13px;
+        margin-top: 10px;
+        text-align: left;
     }
 
     .ourProductMainL .button_group {
         margin-top: 20px;
     }
 
+    .howWeWorkDetails h2,
     .ourProductMainL h4 {
-        font-size: 24px;
-        line-height: 28.2px;
+        font-size: 18px;
+        line-height: 27.2px;
+        margin: 10px 0;
+    }
+
+    .ourProductMainL h4 {
         margin: 0 0 10px;
     }
 
+    .howWeWork {
+        position: relative;
+    }
+
+    .howWeWorkR img {
+        position: absolute;
+        top: 48px;
+    }
+
+    .howWeWorkDetails {
+        margin: 230px 0 20px;
+    }
+
+    .blogsGrid {
+        margin-bottom: 20px;
+    }
+
+    .latestBlog .text-center:has(.button) {
+        text-align: left !important;
+    }
+
+    .span {
+        margin: 10px 0 0;
+        display: inline-block;
+    }
+
+    .padding-class-20.latestBlog {
+        margin-top: 30px;
+    }
+
     footer {
-        padding: 20px;
+        padding: 30px 20px 20px;
+    }
+
+    footer form {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    footer form h6 {
+        text-align: left;
+    }
+
+    footer .footerMainLSideL .socialIcons img {
+        opacity: 1;
     }
 
     footer h4 {
@@ -230,6 +406,7 @@
     .productHeroMain p {
         max-width: 100%;
         margin: 10px 0 20px;
+        text-align: justify;
     }
 
     .productHeroMain img {
@@ -239,6 +416,7 @@
     .productHeroMain h1 {
         font-size: 16px;
         line-height: 18.1px;
+        margin: 10px 0 0;
     }
 
     .productBlogSection button {
@@ -253,7 +431,60 @@
         padding: 15px;
     }
 
+    .faq,
     .productBenefits .productGridDiv {
         padding-top: 20px;
+    }
+
+    .whyLeaseMatrixSlider .whyLeaseMatrixSliderL img {
+        max-width: 32px;
+    }
+
+    .whyLeaseMatrixSlider .whyLeaseMatrixSliderL p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .ourProductMainR img {
+        height: 170px;
+    }
+
+    .ourProductMain {
+        flex-direction: column-reverse;
+    }
+
+    .ourProductMainL .productImageForMob {
+        display: block;
+        width: 100%;
+        height: 170px;
+        margin: 20px 0 40px;
+    }
+
+    .footerMain .desc {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .ourProductMainR img {
+        display: none;
+    }
+
+    footer ul li p,
+    footer ul li a {
+        margin-bottom: 10px;
+    }
+
+    .formMainGird .formInner:nth-child(5),
+    .formMainGird .formInner:last-child {
+        grid-column: unset;
+    }
+
+    .formMainGird {
+        grid-template-columns: 1fr;
+    }
+
+    .productHeroMain button,
+    .productHeroMain span {
+        margin: unset;
     }
 }
