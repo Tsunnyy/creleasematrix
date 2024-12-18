@@ -850,3 +850,17 @@ if (!window.location.href.indexOf("blog") > -1) {
         });
     }
 }
+
+$("#navbarSupportedContent .nav-link").on("click", function () {
+    $('.navbar-collapse.collapse').removeClass('show');
+})
+
+$(document).on("click", function (e) {
+    if (!$(e.target).closest('#navbarSupportedContent').length) {
+        $('.navbar-collapse.collapse').removeClass('show');
+    }
+});
+
+$('#navbarSupportedContent').on("click", function (e) {
+    e.stopPropagation();
+});
