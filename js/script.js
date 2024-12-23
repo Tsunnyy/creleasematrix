@@ -452,25 +452,71 @@ handleFormSubmit('#miniForm');
 //     }
 //     return tl;
 // }
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
+//     const container = document.getElementById('ourClientsId');
+//     const items = Array.from(container.children);
+
+//     items.forEach(item => {
+//         const clone = item.cloneNode(true);
+//         container.appendChild(clone);
+//     });
+
+//     const totalWidth = container.scrollWidth;
+//     container.style.width = `${totalWidth}px`;
+
+//     gsap.to(container, {
+//         x: `-${totalWidth / 2}px`,
+//         duration: 50,
+//         repeat: -1,
+//         ease: "none",
+//     });
+// });
+
+function setupMarquee() {
+    // Get the container and all client logos
     const container = document.getElementById('ourClientsId');
-    const items = Array.from(container.children);
+    const clientLogos = container.children;
+    const totalWidth = Array.from(clientLogos).reduce((acc, logo) =>
+        acc + logo.offsetWidth, 0);
 
-    items.forEach(item => {
-        const clone = item.cloneNode(true);
-        container.appendChild(clone);
+    // Create the GSAP timeline
+    const tl = gsap.timeline({
+        repeat: -1,  // Infinite repeat
+        defaults: {
+            ease: "none"  // Linear animation
+        }
     });
 
-    const totalWidth = container.scrollWidth;
-    container.style.width = `${totalWidth}px`;
-
-    gsap.to(container, {
-        x: `-${totalWidth / 2}px`,
-        duration: 50,
-        repeat: -1,
-        ease: "none",
+    // Set initial position
+    gsap.set(clientLogos, {
+        x: 0
     });
+
+    // Animate
+    tl.to(clientLogos, {
+        x: -totalWidth / 2,  // Move half the width (since we have duplicates)
+        duration: 100,        // Adjust speed by changing duration
+        ease: "none"
+    });
+
+    // Reset position when animation completes
+    tl.eventCallback("onComplete", () => {
+        gsap.set(clientLogos, { x: 0 });
+    });
+}
+
+// Wait for images to load before initializing
+window.addEventListener('load', setupMarquee);
+
+// Optional: Pause on hover
+document.getElementById('ourClientsId').addEventListener('mouseenter', () => {
+    gsap.globalTimeline.pause();
 });
+
+document.getElementById('ourClientsId').addEventListener('mouseleave', () => {
+    gsap.globalTimeline.resume();
+});
+
 
 
 // Slider
