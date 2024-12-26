@@ -341,13 +341,14 @@
         position: relative;
     }
 
-    .howWeWorkR img {
+    /* .howWeWorkR img {
         position: absolute;
         top: 48px;
-    }
+    } */
 
     .howWeWorkDetails {
         margin: 230px 0 20px;
+        margin: 30px 0 20px;
     }
 
     .blogsGrid {

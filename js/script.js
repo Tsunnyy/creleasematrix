@@ -32,7 +32,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                             <a class="nav-link active" aria-current="page" href="#ourClientsId">Why Lease Matrix?</a>
                         </li>
                         <li class="nav-item dropdown productDropDown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#"
                                 aria-expanded="false">
                                 Products
                             </a>
@@ -46,7 +46,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 <li><a class="dropdown-item" href="/products/leasemanagement.html"><img src="/img/product/4.svg" alt="product Icon">
                                         Lease Management</a></li>
                                 <li><a class="dropdown-item" href="/products/reportsmanagement.html"><img src="/img/product/5.svg" alt="product Icon">
-                                        Reports</a></li>
+                                        Reports (MIS)</a></li>
                             </ul>
                         </li>
                         <li class="nav-item d-none-on-web-accordian">
@@ -69,7 +69,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                                 <li><a class="dropdown-item" href="/products/leasemanagement.html"><img src="/img/product/4.svg" alt="product Icon">
                                         Lease Management</a></li>
                                 <li><a class="dropdown-item" href="/products/reportsmanagement.html"><img src="/img/product/5.svg" alt="product Icon">
-                                        Reports</a></li>
+                                        Reports (MIS)</a></li>
                                     </ul>   
                                 </div>
                                 </div>
@@ -95,7 +95,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
                             <a class="nav-link" href="#howItWorks">How it works</a>
                         </li>
                         <li class="nav-item dropdown resourceDropDown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle" href="#"
                                 aria-expanded="false">
                                 Resources
                             </a>
@@ -123,6 +123,7 @@ header.innerHTML = `<nav class="navbar navbar-expand-lg">
             </div>
         </nav>`;
 document.body.prepend(header)
+
 
 // Footer
 const footer = document.createElement("div")
