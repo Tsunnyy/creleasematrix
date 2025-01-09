@@ -337,6 +337,13 @@ $(document).ready(function () {
         placeholder: "Select"
     });
 
+    if (window.location.href.includes('#book-a-demo')) {
+        var myModal = new bootstrap.Modal(document.getElementById('bookaDemoModal'), {
+            keyboard: false
+        });
+        myModal.show();
+    }
+
     // $('#modalForm').on("submit", function (e) {
     //     e.preventDefault();
     //     $(".loader-parent").css("visibility", "visible");
